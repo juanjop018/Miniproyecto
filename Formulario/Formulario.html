@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Modificado</title>
+    <link rel="stylesheet" href="Formulario.css">
+</head>
+
+<body>
+    <form id="formulario">
+        <!-- Campo de Nombre y Apellido -->
+        <label for="nombre" class="full-width">Nombre y Apellido:</label>
+        <input type="text" id="nombre" name="nombre" class="full-width">
+        <span id="error-nombre" class="error-message"></span>
+
+        <!-- Fecha de Nacimiento -->
+        <label for="fecha_nacimiento" class="full-width">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="full-width">
+        <span id="error-fecha_nacimiento" class="error-message"></span>
+
+        <!-- Barra de Edad -->
+        <label for="edad" class="full-width">Edad:</label>
+        <input type="range" id="edad" name="edad" min="18" max="100" value="18" class="full-width" step="1">
+        <span id="edad-valor">18</span>
+        <span id="error-edad" class="error-message"></span>
+
+        <!-- Tipo de Documento -->
+        <label for="tipo_documento">Tipo de Documento:</label>
+        <select id="tipo_documento" name="tipo_documento" class="full-width">
+            <option value="">Seleccionar</option>
+            <option value="CC">Cédula de Ciudadanía</option>
+            <option value="CE">Cédula de Extranjería</option>
+            <option value="Pasaporte">Pasaporte</option>
+            <option value="NIT">NIT</option>
+        </select>
+        <span id="error-tipo_documento" class="error-message"></span>
+
+        <!-- Número de Documento -->
+        <label for="numero_documento" class="full-width">Número de Documento:</label>
+        <input type="text" id="numero_documento" name="numero_documento" minlength="10" class="full-width">
+        <span id="error-numero_documento" class="error-message"></span>
+
+        <!-- Género -->
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" class="full-width">
+            <option value="">Seleccionar</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
+        <span id="error-genero" class="error-message"></span>
+
+        <!-- Radio Button de Hobby -->
+        <label class="full-width">Hobby:</label>
+        <div class="full-width">
+            <input type="radio" id="deporte" name="hobby" value="deporte"> Deporte
+            <input type="radio" id="musica" name="hobby" value="musica"> Música
+            <input type="radio" id="lectura" name="hobby" value="lectura"> Lectura
+            <span id="error-hobby" class="error-message"></span>
+        </div>
+
+        <!-- Checkboxes de Habilidades -->
+        <label class="full-width">Habilidades:</label>
+        <div class="full-width">
+            <input type="checkbox" id="habilidad1" name="habilidades" value="programacion"> Programación
+            <input type="checkbox" id="habilidad2" name="habilidades" value="dibujo"> Dibujo
+            <input type="checkbox" id="habilidad3" name="habilidades" value="musica"> Música
+            <input type="checkbox" id="habilidad4" name="habilidades" value="deporte"> Deporte
+            <span id="error-habilidades" class="error-message"></span>
+        </div>
+
+        <!-- Correo Electrónico -->
+        <label for="correo" class="full-width">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" class="full-width">
+        <span id="error-correo" class="error-message"></span>
+
+        <!-- Contraseña -->
+        <label for="contrasena" class="full-width">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" minlength="8" class="full-width">
+        <span id="error-contrasena" class="error-message"></span>
+
+        <!-- Botón de Enviar -->
+        <button type="submit" class="full-width">Enviar</button>
+    </form>
+
+    <script src="Formulario.js"></script>
+</body>
+
+</html>
